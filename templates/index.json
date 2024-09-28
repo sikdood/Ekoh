@@ -52,6 +52,15 @@
         "text_artikel_3_titel": "Blog title heading will go here",
         "text_artikel_3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
       }
+    },
+    "release_b6pDbk": {
+      "type": "release",
+      "settings": {
+        "text_heading": "sdfsdf",
+        "text_title": "Medium length hero heading goes here",
+        "url_button_link": "",
+        "text_button_text": "Button"
+      }
     }
   },
   "layout": "theme",
@@ -60,6 +69,7 @@
     "hero",
     "category",
     "links",
-    "content"
+    "content",
+    "release_b6pDbk"
   ]
 }
