@@ -1,0 +1,51 @@
+<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_member-wrapper"><div class="footer_link-grid">{% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" class="footer_link-list">
+                                    
+                            <div li-object="link.title" class="text-weight-semibold">{{ link.title }}</div>
+                            
+                            <div class="spacer-xsmall"></div>
+                            
+                            {% for child_link in link.links %}    <div li-for="child_link in link.links">
+                                    
+                            <a li-object:href="child_link.url" li-object="child_link.title" href="{{ child_link.url }}" class="text-size-small">{{ child_link.title }}</a>
+                            
+                        </div>
+{% endfor %}
+                            
+                        </div>
+{% endfor %}</div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h2 class="heading-style-h2 text-color-white">
+{{ section.settings.text_newsletter_headline }}
+</h2>
+<div class="footer_form-block w-form">{% form 'customer', return_to: '/', class: 'footer_form' %}
+<input class="form-input is-white w-input" maxlength="256" name="contact[email]" data-name="email" placeholder="Your E-Mail-Address" type="email" id="email" required="">
+<div li-object="form.errors | default_errors" class="text-size-regular text-color-red">{{ form.errors | default_errors }}</div><div id="w-node-ced975e7-1b4d-f69e-9e83-8c61141236df-cf39daf1" class="hide w-embed"><input type="hidden" name="contact[accepts_marketing]" value="false">
+</div><label id="w-node-ced975e7-1b4d-f69e-9e83-8c61141236e0-cf39daf1" class="w-checkbox form-checkbox" name="contact[accepts_marketing]"><input type="checkbox" name="Accepts-Marketing" id="Accepts-Marketing" data-name="Accepts Marketing" class="w-checkbox-input form-checkbox-icon">
+<span class="form-checkbox-label text-size-tiny w-form-label" for="Accepts-Marketing">
+{{ section.settings.text_checkbox }}
+</span>
+</label><input type="submit" data-wait="" id="w-node-_8c754474-e4d5-bcc2-d22b-03af6f725bec-cf39daf1" class="button w-button" value="Subscribe to Newsletter">
+{% endform %}
+<div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="error-message w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_grid-payment"><div class="payment-wrapper"><div class="text-size-regular text-color-white">Delivery</div><div class="payment-icons">{% for block in section.blocks %}
+    {% if block.type == "lieferung-icon" %}
+                    <div li-block="Lieferung-icon">
+                                    <div><img class="footer_payment-icon"
+     src="{{ block.settings.image_icon | img_url: 'master' }}"
+     alt="{{ block.settings.image_icon.alt }}"
+     loading="lazy">
+</div>
+                            </div>
+            {% endif %}
+{% endfor %}
+</div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0baf2-cf39daf1" class="payment-wrapper"><div class="text-size-regular text-color-white">Payment Method</div><ul role="list" class="footer_payment-list w-list-unstyled">{% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types">
+                                    
+                            <div li-object="type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color'">{{ type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color' }}</div>
+                            
+                        </li>
+{% endfor %}</ul></div><div class="payment-wrapper"><div class="text-size-regular text-color-white">Social Media</div><div class="payment-icons is-social">{% for block in section.blocks %}
+    {% if block.type == "social-media" %}
+                    <div li-block="Social-media">
+                                    <a class="w-inline-block" href="{{ block.settings.url_social_link }}"> <img class="footer_social-icon" src="{{ block.settings.image_social_icon | img_url: 'master' }}" alt="{{ block.settings.image_social_icon.alt }}" loading="lazy"> </a>
+
+                            </div>
+            {% endif %}
+{% endfor %}
+</div></div></div></div></div><div class="footer_trennlinie"></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]},{"name":"Social-media","type":"social-media","settings":[{"id":"url_social_link","type":"url","label":"Social-link"},{"id":"image_social_icon","type":"image_picker","label":"social-icon"}]}],"settings":[{"id":"text_newsletter_headline","type":"text","label":"Newsletter-Headline","default":"Signup for Newsletter"},{"id":"text_checkbox","type":"text","label":"Checkbox","default":"By subscribing you agree to with our <a href=\"#\"><span class=\"text-color-white text-style-link\">Privacy Policy<\/span><\/a> and provide consent to receive updates from our company."}],"presets":[{"name":"footer","category":"Liquify"}]} {% endschema %}
