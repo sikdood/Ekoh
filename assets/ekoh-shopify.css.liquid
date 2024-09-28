@@ -2,6 +2,7 @@
   --black: #000;
   --base-color-neutral--white: white;
   --base-color-neutral--neutral: #666;
+  --brand: #e45700;
   --text-color--text-primary: var(--base-color-neutral--black);
   --text-color--text-alternate: var(--base-color-neutral--white);
   --base-color-neutral--black: black;
@@ -9,16 +10,15 @@
   --border-radius--medium: .5rem;
   --base-color-neutral--neutral-darker: #222;
   --text-color--text-secondary: var(--base-color-neutral--neutral-darker);
-  --brand: #e45700;
   --border-radius--small: .25rem;
   --base-color-system--focus-state: #2d62ff;
   --background-color--background-tertiary: var(--base-color-brand--pink);
   --base-color-neutral--neutral-dark: #444;
+  --text-color--text-error: var(--base-color-system--error-red-dark);
   --transparent: transparent;
   --base-color-neutral--neutral-lightest: #eee;
   --link-color--color: white;
   --accessible-components-dark-grey\<deleted\|variable-c4d8099c\>: #9b9b9b;
-  --text-color--text-error: var(--base-color-system--error-red-dark);
   --base-color-system--success-green-dark: #17660f;
   --base-color-system--error-red: #f8e4e4;
   --base-color-system--error-red-dark: #9b1313;
@@ -444,6 +444,10 @@ figcaption {
   line-height: 1.1;
 }
 
+.heading-style-h1.brand {
+  color: var(--brand);
+}
+
 .padding-global {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -572,6 +576,7 @@ figcaption {
 }
 
 .text-size-small.alternate-font {
+  text-transform: uppercase;
   font-family: Ekohfromhell, sans-serif;
 }
 
@@ -750,6 +755,12 @@ figcaption {
 
 .button.is-secondary.pointer-events-off.max-width-full {
   background-color: var(--base-color-neutral--white);
+}
+
+.button.is-secondary.pointer-events-off.max-width-full.not-in-stock {
+  background-color: var(--text-color--text-error);
+  color: var(--base-color-neutral--white);
+  border-style: none;
 }
 
 .button.is-outline {
@@ -1630,12 +1641,13 @@ figcaption {
   object-fit: contain;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   position: absolute;
   inset: 0%;
 }
 
 .product-item_text-link {
-  flex-direction: column;
+  flex-flow: row;
   justify-content: space-between;
   align-items: flex-start;
   text-decoration: none;
@@ -1662,7 +1674,8 @@ figcaption {
 }
 
 .nav_component {
-  background-color: var(--black);
+  background-color: var(--transparent);
+  background-image: linear-gradient(180deg, var(--base-color-neutral--black) 25%, var(--transparent));
   border-bottom: 1px solid #3232321a;
   justify-content: center;
   align-items: center;
