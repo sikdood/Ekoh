@@ -111,7 +111,7 @@
     </script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
 <body li-page="product">
 
-<div class="page-wrapper">{% render 'background_image' %}
+<div class="page-wrapper"><img src="{{ 'Ekoh-BG.jpg' | asset_url }}" loading="eager" sizes="100vw" srcset="{{ 'Ekoh-BG.jpg' | asset_url }} 500w, {{ 'Ekoh-BG.jpg' | asset_url }} 800w, {{ 'Ekoh-BG.jpg' | asset_url }} 1080w, {{ 'Ekoh-BG.jpg' | asset_url }} 1600w, {{ 'Ekoh-BG.jpg' | asset_url }} 2000w, {{ 'Ekoh-BG.jpg' | asset_url }} 2160w" alt="" class="body_background-image">
 {% render 'global_styles' %}
 {% section 'header' %}
  {{ content_for_layout }} {% section 'footer' %}
