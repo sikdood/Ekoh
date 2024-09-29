@@ -36,6 +36,12 @@
         "url_button_link": "",
         "text_button_text": "Button"
       }
+    },
+    "video_KqtDgN": {
+      "type": "video",
+      "settings": {
+        "url_button_link": "https://www.youtube.com/watch?v=Z0SA-1rXdw0&ab_channel=NapalmRecords"
+      }
     }
   },
   "layout": "theme",
@@ -43,6 +49,7 @@
   "order": [
     "hero",
     "category",
-    "release_b6pDbk"
+    "release_b6pDbk",
+    "video_KqtDgN"
   ]
 }
