@@ -1,23 +1,14 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero": {
-      "type": "hero",
-      "settings": {
-        "text_headline": "Short heading here",
-        "richtext_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
-        "url_button_link": "",
-        "text_button_text": "More Information"
-      }
-    },
     "category": {
       "type": "category",
       "settings": {
@@ -27,29 +18,11 @@
         "collection_collection": "all",
         "collection_collection_limit": 4
       }
-    },
-    "release_b6pDbk": {
-      "type": "release",
-      "settings": {
-        "text_heading": "sdfsdf",
-        "text_title": "Medium length hero heading goes here",
-        "url_button_link": "",
-        "text_button_text": "Button"
-      }
-    },
-    "video_KqtDgN": {
-      "type": "video",
-      "settings": {
-        "url_button_link": "https://www.youtube.com/watch?v=Z0SA-1rXdw0&ab_channel=NapalmRecords"
-      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "hero",
-    "category",
-    "release_b6pDbk",
-    "video_KqtDgN"
+    "category"
   ]
 }

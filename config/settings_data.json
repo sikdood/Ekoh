@@ -1,17 +1,37 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "vorschlaege_MTBD9b": {
+            "type": "vorschlaege",
+            "settings": {
+              "url_link": "",
+              "text_text": "Tag"
+            }
+          },
+          "vorschlaege_T9XFhx": {
+            "type": "vorschlaege",
+            "settings": {
+              "url_link": "",
+              "text_text": "Tag"
+            }
+          }
+        },
+        "block_order": [
+          "vorschlaege_MTBD9b",
+          "vorschlaege_T9XFhx"
+        ],
         "settings": {
           "collection_bestseller": "digital-albums",
           "collection_bestseller_limit": 29
