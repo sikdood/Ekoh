@@ -13,6 +13,7 @@ document.addEventListener('alpine:init', () => {
          * All variants of the current product.
          */
         variants: pProduct?.variants,
+        initial_selected_or_first_available_variant: selectedOrFirstAvailable,
         selected_or_first_available_variant: selectedOrFirstAvailable,
         variantImage: selectedOrFirstAvailable?.featured_image?.src,
         selected_product_id: selectedOrFirstAvailable?.id,
@@ -27,7 +28,7 @@ document.addEventListener('alpine:init', () => {
 
         // Use init for debugging
         init() {
-            const productId = document.querySelector('#shopify-section-product_hero [li-element="product-variant-container"][data-productid]')?.getAttribute('data-productid');
+            const productId = document.querySelector('[li-element="product-variant-container"][data-productid]')?.getAttribute('data-productid');
             this.isMainProduct = parseInt(productId) === parseInt(pProduct.id);
         },
 
@@ -230,9 +231,18 @@ document.addEventListener('alpine:init', () => {
                 this.firstOptionHasAvailableChildren[variant?.option1] += variant?.available;
             });
 
-            const option1 = this.getVariantElement(this.options?.[0]);
-            const option2 = this.getVariantElement(this.options?.[1]);
-            const option3 = this.getVariantElement(this.options?.[2]);
+            const option1 = this.options.length > 0
+                ? this.getVariantElement(this.options?.[0])
+                : false;
+
+            const option2 = this.options.length > 1
+                ? this.getVariantElement(this.options?.[1])
+                : false;
+
+            const option3 = this.options.length > 2
+                ? this.getVariantElement(this.options?.[2])
+                : false;
+
             if (option1) {
                 this.activateVariant(option1)
             }
@@ -264,18 +274,19 @@ document.addEventListener('alpine:init', () => {
         },
 
         /**
-         * Holt aus der übergebenen Optionsgruppe den Wert des selektierten Redio-Buttons
+         * Retrieves the value of the selected Redio button from the transferred option group
          */
         checkedVariantValue(optionName) {
             return this.getVariantElement(optionName)?.value;
         },
 
         /**
-         * Holt aus der übergebenen Optionsgruppe das selektierte Element
+         * Retrieves the selected element from the transferred option group
          */
         getVariantElement(optionName) {
-            let selector = this.formSelector + " [data-productVariantsLoop] input[name='" + optionName + "']:checked"
-            if (this.selectorType === 'select') {
+            let selector = this.formSelector + " [data-productVariantsLoop] input[name='" + optionName + "']:checked";
+
+            if (optionName != undefined && this.selectorType === 'select') {
                 selector = this.formSelector + " [data-productVariantsLoop] select[name='" + optionName + "'] option:checked"
                 if (this.qs(selector)['data-disabled'] ?? false) {
                     selector = this.formSelector + " [data-productVariantsLoop] select[name='" + optionName + "'] option:not([data-disabled])"
@@ -285,9 +296,17 @@ document.addEventListener('alpine:init', () => {
         },
 
         filterVariants() {
-            const option1 = this.checkedVariantValue(this.options?.[0]);
-            const option2 = this.checkedVariantValue(this.options?.[1]);
-            const option3 = this.checkedVariantValue(this.options?.[2]);
+            const option1 = this.options.length > 0
+                ? this.checkedVariantValue(this.options?.[0])
+                : false;
+
+            const option2 = this.options.length > 1
+                ? this.checkedVariantValue(this.options?.[1])
+                : false;
+
+            const option3 = this.options.length > 2
+                ? this.checkedVariantValue(this.options?.[2])
+                : false;
 
             let selectedOptions = [
                 option1,
@@ -366,9 +385,9 @@ document.addEventListener('alpine:init', () => {
                     return nextAvailable[0]
                 }
 
-                console.log('Liquify - No next best option found')
+                console.log('Liquify - No next best option found, using initial first available variant')
 
-                return undefined
+                return this.initial_selected_or_first_available_variant
             }
 
             return matchedProducts[0]

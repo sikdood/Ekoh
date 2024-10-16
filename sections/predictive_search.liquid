@@ -36,7 +36,7 @@
     <div class="predictive-search_overflow"><div><div><div class="predictive-search_topic"><div class="predictive-search_headline"><div class="text-style-muted">Suggestions</div></div><ul role="list" class="predictive-search_list w-list-unstyled">{% for block in section.blocks %}
     {% if block.type == "vorschlaege" %}
                     <li li-block="Vorschlaege" class="predictive-search_item">
-                                    <a class="predictive-search_link w-inline-block" href="{{ block.settings.url_link }}"> <div>{{ block.settings.text_text }}</div> </a>
+                                    <a href="{{ block.settings.url_link }}" class="predictive-search_link w-inline-block"> <div>{{ block.settings.text_text }}</div> </a>
 
                             </li>
             {% endif %}
