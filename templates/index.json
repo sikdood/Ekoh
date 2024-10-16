@@ -18,11 +18,20 @@
         "collection_collection": "all",
         "collection_collection_limit": 4
       }
+    },
+    "discography_DRiaLx": {
+      "type": "discography",
+      "settings": {
+        "text_headline": "Discography",
+        "text_button_text": "view all discography",
+        "url_button_link": ""
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "category"
+    "category",
+    "discography_DRiaLx"
   ]
 }
