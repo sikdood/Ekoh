@@ -23,8 +23,12 @@
       "type": "discography",
       "settings": {
         "text_headline": "Discography",
-        "text_button_text": "view all discography",
-        "url_button_link": ""
+        "text_button_text": "View All Discography",
+        "url_button_link": "",
+        "url_spotify_profile": "https://open.spotify.com/artist/5lC7N2Mm9i92KSfW4opawO",
+        "url_apple_profile": "https://music.apple.com/us/artist/ekoh/551929795",
+        "url_youtube_music_profile": "https://www.youtube.com/channel/UCBLZeU9hBJ12LgdexUdOjpA",
+        "url_tidal_profile": "https://tidal.com/browse/artist/6160864"
       }
     }
   },
