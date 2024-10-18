@@ -35,6 +35,16 @@
       "type": "tour_dates",
       "settings": {
       }
+    },
+    "hero_merch_CehFEG": {
+      "type": "hero_merch",
+      "settings": {
+        "text_headline": "Featured Merch",
+        "url_button_link": "",
+        "text_button_text": "ALL MERCH",
+        "collection_collection": "all",
+        "collection_collection_limit": 4
+      }
     }
   },
   "layout": "theme",
@@ -42,6 +52,7 @@
   "order": [
     "category",
     "discography_DRiaLx",
-    "tour_dates_ATfWY9"
+    "tour_dates_ATfWY9",
+    "hero_merch_CehFEG"
   ]
 }
