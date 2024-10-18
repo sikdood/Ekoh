@@ -30,12 +30,18 @@
         "url_youtube_music_profile": "https://www.youtube.com/channel/UCBLZeU9hBJ12LgdexUdOjpA",
         "url_tidal_profile": "https://tidal.com/browse/artist/6160864"
       }
+    },
+    "tour_dates_ATfWY9": {
+      "type": "tour_dates",
+      "settings": {
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "category",
-    "discography_DRiaLx"
+    "discography_DRiaLx",
+    "tour_dates_ATfWY9"
   ]
 }
