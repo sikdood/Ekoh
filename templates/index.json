@@ -12,10 +12,10 @@
     "hero_release_4pLRDi": {
       "type": "hero_release",
       "settings": {
-        "text_heading": "Heading",
-        "text_title": "Medium length hero heading goes here",
+        "text_heading": "New Song",
+        "text_title": "New song",
         "url_button_link": "",
-        "text_button_text": "Button",
+        "text_button_text": "Listen Now",
         "image_release_cover": "shopify://shop_images/digipack.jpg"
       }
     },
