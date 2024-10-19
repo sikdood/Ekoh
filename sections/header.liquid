@@ -1,3 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+<script>
+    var animation = lottie.loadAnimation({
+        container: document.querySelector('.nav_logo-lottie'), // the class you're targeting
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '{{ "EKOH-Logo-Animation-V2.json" | asset_url }}' // use a .json file
+    });
+</script>
+
 <section class="banner5_component layer-two"><div><div><div class="banner5_wrapper"><div class="banner5_content"><div>Medium length banner heading <a href="#">with link</a>goes here</div></div></div></div></div></section><section class="banner5_component laye-rone"><div><div><div class="banner5_wrapper transparent"><div class="banner5_content"><div>Medium length banner heading <a href="#">with link</a>goes here</div></div></div></div></div></section><div data-animation="default" class="nav_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="1f4a994c-7640-c194-e1f7-4193b5553f7b" role="banner" data-duration="400" x-data=""><div class="nav_container"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" id="w-node-_1f4a994c-7640-c194-e1f7-4193b5553f7d-b641c10b" class="nav_logo-link w-nav-brand"><div class="nav_logo-lottie" data-w-id="329a0370-5e75-7350-778d-1b291baa3252" data-animation-type="lottie" data-src="{{ 'EKOH-Logo-Animation-V2.lottie' | asset_url }}" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="canvas" data-default-duration="0" data-duration="0"></div></a><nav role="navigation" id="w-node-_1f4a994c-7640-c194-e1f7-4193b5553f7f-b641c10b" class="nav_menu is-page-height-tablet w-nav-menu">{% for link in linklists['main-menu'].links %}    <div data-hover="false" data-delay="200" li-for="link in linklists['main-menu'].links" class="nav_menu-dropdown w-dropdown">
                                     
                             <div class="nav_dropdown-toggle w-dropdown-toggle">{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
