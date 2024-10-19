@@ -28,12 +28,25 @@
         "collection_collection": "all",
         "collection_collection_limit": 4
       }
+    },
+    "hero_discography_pY8Whf": {
+      "type": "hero_discography",
+      "settings": {
+        "text_headline": "Discography",
+        "text_button_text": "view all discography",
+        "url_button_link": "",
+        "url_spotify_profile": "",
+        "url_apple_profile": "",
+        "url_youtube_music_profile": "",
+        "url_tidal_profile": ""
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "hero_release_4pLRDi",
-    "hero_merch_CehFEG"
+    "hero_merch_CehFEG",
+    "hero_discography_pY8Whf"
   ]
 }
