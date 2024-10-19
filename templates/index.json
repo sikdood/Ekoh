@@ -40,6 +40,11 @@
         "url_youtube_music_profile": "",
         "url_tidal_profile": ""
       }
+    },
+    "hero_tour_dates_JQ9wQW": {
+      "type": "hero_tour_dates",
+      "settings": {
+      }
     }
   },
   "layout": "theme",
@@ -47,6 +52,7 @@
   "order": [
     "hero_release_4pLRDi",
     "hero_merch_CehFEG",
-    "hero_discography_pY8Whf"
+    "hero_discography_pY8Whf",
+    "hero_tour_dates_JQ9wQW"
   ]
 }
