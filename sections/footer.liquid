@@ -60,7 +60,7 @@
 </span>
 </label><input type="submit" data-wait="" id="w-node-_8c754474-e4d5-bcc2-d22b-03af6f725bec-cf39daf1" class="button w-button" value="Subscribe to Newsletter">
 {% endform %}
-<div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="error-message w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_grid-payment"><div class="payment-wrapper"><div class="text-size-regular text-color-white">Delivery</div><div class="payment-icons">{% for block in section.blocks %}
+<div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="error-message w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="footer_trennlinie"></div><div class="padding-global"><div class="container-large padding-vertical padding-large"><div class="footer_grid-payment"><div class="payment-wrapper hide"><div class="text-size-regular text-color-white">Delivery</div><div class="payment-icons">{% for block in section.blocks %}
     {% if block.type == "lieferung-icon" %}
                     <div li-block="Lieferung-icon">
                                     <div><img class="footer_payment-icon"
@@ -72,12 +72,12 @@
                             </div>
             {% endif %}
 {% endfor %}
-</div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0baf2-cf39daf1" class="payment-wrapper"><div class="text-size-regular text-color-white">Payment Method</div><ul role="list" class="footer_payment-list w-list-unstyled">{% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types">
+</div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0baf2-cf39daf1" class="payment-wrapper hide"><div class="text-size-regular text-color-white">Payment Method</div><ul role="list" class="footer_payment-list w-list-unstyled">{% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types">
                                     
                             <div li-object="type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color'">{{ type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color' }}</div>
                             
                         </li>
-{% endfor %}</ul></div><div class="payment-wrapper"><div class="text-size-regular text-color-white">Social Media</div><div class="payment-icons is-social">{% for block in section.blocks %}
+{% endfor %}</ul></div><div class="payment-wrapper"><div class="text-size-regular text-color-white hide">Social Media</div><div class="payment-icons is-social">{% for block in section.blocks %}
     {% if block.type == "social-media" %}
                     <div li-block="Social-media">
                                     <a href="{{ block.settings.url_social_link }}" target="_blank" class="w-inline-block"> <img class="footer_social-icon" alt="{{ block.settings.image_social_icon.alt }}" src="{{ block.settings.image_social_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_social_icon.alt }}" class="footer_social-icon"}> </a>
