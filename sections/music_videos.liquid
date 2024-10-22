@@ -7,7 +7,7 @@
 {% assign youtube_url = article.metafields.custom.youtube | default: "" %}
 
     {% assign video_id = youtube_url | split: "v=" | last | split: "&" | first %}
-    {% assign video_id = youtube_url | split: "/" | last %}
+
 
   <script type="application/json" class="w-json">
   {
