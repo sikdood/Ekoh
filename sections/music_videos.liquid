@@ -59,7 +59,7 @@
 	left: 0;
 }
 </style></div><div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">{% for article in blogs['release'].articles limit:3 %}    <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item-2 w-dyn-item">
-            {% assign youtube_url = article.metafields.custom.youtube_url %}
+            {% assign youtube_url = article.metafields.custom.youtube %}
 {% if youtube_url contains "youtu.be" %}
   {% assign video_id = youtube_url | split: "/" | last %}
 {% elsif youtube_url contains "youtube.com/watch?v=" %}
