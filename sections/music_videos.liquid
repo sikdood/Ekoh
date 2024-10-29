@@ -1,72 +1,32 @@
-<div class="padding-global">
-  <div class="container-large">
-    <h1 class="heading-style-h1 text-align-center">
-      {{ section.settings.text_headline }}
-    </h1>
-    <div class="collection-list-wrapper w-dyn-list">
-      <div role="list" class="collection-list-2 w-dyn-items">
-        
-        {% for article in blogs['Release'].articles limit:4 %}
-          {% if article.metafields.custom.thumbnail and article.metafields.custom.youtube %}
-            
-            <!-- Extract the video ID from the YouTube URL -->
-            {% assign video_url = article.metafields.custom.youtube %}
-            {% assign v_index = video_url | index_of: 'v=' %}
-            {% assign video_id_start = v_index | plus: 2 %}
-            {% assign video_id = video_url | slice: video_id_start, 11 %}
 
-            <div role="listitem" class="collection-item-2 w-dyn-item">
-              <a href="#" id="w-node-_0a1b71a2-7e81-3c0a-dcec-dd07bb95e970-bb95e970" class="video_lightbox w-inline-block w-lightbox">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewbox="0 0 16 16" app="ikonik" class="ikonik-yo3dm">
-                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" app="ikonik"></path>
-                </svg>
-                <img src="{{ article.metafields.custom.thumbnail | img_url:'master' }}" loading="lazy" alt="" class="video_thumbnail">
-                
-                <!-- JSON data for the lightbox -->
-                <script type="application/json" class="w-json">
-                {
-                  "items": [
-                    {
-                      "url": "https://www.youtube.com/embed/{{ video_id }}?autoplay=1&loop=1&start=15&mute=1&controls=0&playlist={{ video_id }}",
-                      "originalUrl": "https://www.youtube.com/watch?v={{ video_id }}",
-                      "width": 940,
-                      "height": 528,
-                      "thumbnailUrl": "https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg",
-                      "html": "<iframe src=\"https://www.youtube.com/embed/{{ video_id }}?autoplay=1&loop=1&start=15&mute=1&controls=0&playlist={{ video_id }}\" width=\"940\" height=\"528\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture\" allowfullscreen></iframe>",
-                      "type": "video"
-                    }
-                  ],
-                  "group": ""
-                }
-                </script>
-              </a>
-            </div>
-            
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
-
-{% schema %}
-{
-  "tag": "div",
-  "name": "Music Videos",
-  "class": "section_videos padding-vertical padding-large",
-  "settings": [
+<div class="padding-global"><div class="container-large"><h1 class="heading-style-h1 text-align-center">
+{{ section.settings.text_headline }}
+</h1>
+<div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">
+                                                  {% for article in blogs['Release'].articles limit:4 %} {% if article.metafields.custom.thumbnail %}
+                                                    {% assign youtube_url = article.metafields.custom.youtube_url %}
+{% if youtube_url contains "youtu.be" %}
+  {% assign video_id = youtube_url | split: "/" | last %}
+{% elsif youtube_url contains "youtube.com/watch?v=" %}
+  {% assign video_id = youtube_url | split: "v=" | last | split: "&" | first %}
+{% endif %}
+                                                    <div li-for="article in blogs['release'].articles limit:4" role="listitem" class="collection-item-2 w-dyn-item">
+                                    
+                            <a href="#" id="w-node-_0a1b71a2-7e81-3c0a-dcec-dd07bb95e970-bb95e970" class="video_lightbox w-inline-block w-lightbox"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewbox="0 0 16 16" app="ikonik" class="ikonik-yo3dm"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" app="ikonik"></path></svg><img src="{{ article.metafields.custom.thumbnail | img_url:'master' }}" loading="lazy" alt="" class="video_thumbnail">
+<script type="application/json" class="w-json">{
+  "items": [
     {
-      "id": "text_headline",
-      "type": "text",
-      "label": "Headline",
-      "default": "Music Videos"
+      "url": "https://www.youtube.com/watch?v={{ video_id }}",
+      "originalUrl": "https://www.youtube.com/watch?v={{ video_id }}",
+      "width": 940,
+      "height": 528,
+      "thumbnailUrl": "https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg",
+      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F{{ video_id }}%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D{{ video_id }}&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F{{ video_id }}%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\">",
+      "type": "video"
     }
   ],
-  "presets": [
-    {
-      "name": "Music Videos",
-      "category": "Liquify"
-    }
-  ]
-}
-{% endschema %}
+  "group": ""
+}</script></a>
+                            
+                        </div>
+{% endif %}{% endfor %}</div></div></div></div> {% schema %} {"tag":"div","name":"Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Music Videos","category":"Liquify"}]} {% endschema %}
