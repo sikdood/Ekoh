@@ -4,7 +4,7 @@
 </h1>
 <div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">
                                                   {% for article in blogs['Release'].articles limit:4 %} {% if article.metafields.custom.thumbnail %}
-                                                    {% assign youtube_url = article.metafields.custom.youtube_url %}
+                                                    {% assign youtube_url = article.metafields.custom.youtube %}
 {% if youtube_url contains "youtu.be" %}
   {% assign video_id = youtube_url | split: "/" | last %}
 {% elsif youtube_url contains "youtube.com/watch?v=" %}
