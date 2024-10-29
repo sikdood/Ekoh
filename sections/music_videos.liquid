@@ -22,16 +22,17 @@
                 </svg>
                 <img src="{{ article.metafields.custom.thumbnail | img_url:'master' }}" loading="lazy" alt="" class="video_thumbnail">
                 
+                <!-- JSON data for the lightbox -->
                 <script type="application/json" class="w-json">
                 {
                   "items": [
                     {
-                      "url": "https://www.youtube.com/watch?v={{ video_id }}",
+                      "url": "https://www.youtube.com/embed/{{ video_id }}?autoplay=1&loop=1&start=15&mute=1&controls=0&playlist={{ video_id }}",
                       "originalUrl": "https://www.youtube.com/watch?v={{ video_id }}",
                       "width": 940,
                       "height": 528,
                       "thumbnailUrl": "https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg",
-                      "html": "<iframe class=\"embedly-embed\" src=\"https://www.youtube.com/embed/{{ video_id }}?autoplay=1&loop=1&start=15&mute=1&controls=0&playlist={{ video_id }}\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
+                      "html": "<iframe src=\"https://www.youtube.com/embed/{{ video_id }}?autoplay=1&loop=1&start=15&mute=1&controls=0&playlist={{ video_id }}\" width=\"940\" height=\"528\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture\" allowfullscreen></iframe>",
                       "type": "video"
                     }
                   ],
