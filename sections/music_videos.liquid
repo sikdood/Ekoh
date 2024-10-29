@@ -5,10 +5,10 @@
 <div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">
                                                  
   {% for article in blogs['Release'].articles limit:4 %} {% if article.metafields.custom.thumbnail %}
-    {% assign video_url = article.metafields.custom.video_url %}
-{% assign v_index = video_url | index_of: 'v=' %}
+    {% assign youtube = article.metafields.custom.youtube %}
+{% assign v_index = youtube | index_of: 'v=' %}
 {% assign video_id_start = v_index | plus: 2 %}
-{% assign video_id = video_url | slice: video_id_start, 11 %}
+{% assign video_id = youtube | slice: video_id_start, 11 %}
 
 
                                                     <div li-for="article in blogs['release'].articles limit:4" role="listitem" class="collection-item-2 w-dyn-item">
@@ -21,8 +21,8 @@
         {
             "items": [
                 {
-                    "url": "{{ video_url }}",
-                    "originalUrl": "{{ video_url }}",
+                    "url": "{{ youtube }}",
+                    "originalUrl": "{{ youtube }}",
                     "width": 940,
                     "height": 528,
                     "thumbnailUrl": "https://i.ytimg.com/vi/{{ video_id }}/hqdefault.jpg",
