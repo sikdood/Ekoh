@@ -55,6 +55,18 @@
       "settings": {
         "text_headline": "Music Videos"
       }
+    },
+    "discography_mfLtHz": {
+      "type": "discography",
+      "settings": {
+        "text_headline": "Discography",
+        "text_button_text": "view all discography",
+        "url_button_link": "",
+        "url_spotify_profile": "",
+        "url_apple_profile": "",
+        "url_youtube_music_profile": "",
+        "url_tidal_profile": ""
+      }
     }
   },
   "layout": "theme",
@@ -64,6 +76,7 @@
     "hero_merch_CehFEG",
     "hero_discography_pY8Whf",
     "hero_tour_dates_JQ9wQW",
-    "music_videos_ybcWY7"
+    "music_videos_ybcWY7",
+    "discography_mfLtHz"
   ]
 }
