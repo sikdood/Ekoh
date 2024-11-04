@@ -12,11 +12,11 @@
     "hero_release_4pLRDi": {
       "type": "hero_release",
       "settings": {
-        "text_heading": "New Song",
-        "text_title": "New song",
-        "url_button_link": "",
+        "text_heading": "New Album",
+        "text_title": "Pressure",
+        "url_button_link": "https://ffm.to/ekohpressure",
         "text_button_text": "Listen Now",
-        "image_release_cover": "shopify://shop_images/digipack.jpg"
+        "image_release_cover": "shopify://shop_images/0x1900-000000-80-0-0_1.jpg"
       }
     },
     "hero_merch_CehFEG": {
