@@ -29,7 +29,16 @@
         "collection_collection_limit": 4
       }
     },
-    "hero_discography_pY8Whf": {
+    "hero_tour_dates_JQ9wQW": {
+      "type": "hero_tour_dates",
+      "settings": {
+        "image_main_tour_image": "shopify://shop_images/1080x1350-FLYER.webp",
+        "image_secondary_tour_image": "shopify://shop_images/DragMeFromHellTourMG2-1.webp",
+        "text_button_text": "VIP TICKETS AVAILABLE HERE",
+        "url_button_link": ""
+      }
+    },
+    "hero_discography_ra3CRw": {
       "type": "hero_discography",
       "settings": {
         "text_headline": "Discography",
@@ -41,31 +50,10 @@
         "url_tidal_profile": ""
       }
     },
-    "hero_tour_dates_JQ9wQW": {
-      "type": "hero_tour_dates",
-      "settings": {
-        "image_main_tour_image": "shopify://shop_images/1080x1350-FLYER.webp",
-        "image_secondary_tour_image": "shopify://shop_images/DragMeFromHellTourMG2-1.webp",
-        "text_button_text": "VIP TICKETS AVAILABLE HERE",
-        "url_button_link": ""
-      }
-    },
-    "music_videos_ybcWY7": {
-      "type": "music_videos",
+    "hero_music_videos_zm9egb": {
+      "type": "hero_music_videos",
       "settings": {
         "text_headline": "Music Videos"
-      }
-    },
-    "discography_mfLtHz": {
-      "type": "discography",
-      "settings": {
-        "text_headline": "Discography",
-        "text_button_text": "view all discography",
-        "url_button_link": "",
-        "url_spotify_profile": "",
-        "url_apple_profile": "",
-        "url_youtube_music_profile": "",
-        "url_tidal_profile": ""
       }
     }
   },
@@ -74,9 +62,8 @@
   "order": [
     "hero_release_4pLRDi",
     "hero_merch_CehFEG",
-    "hero_discography_pY8Whf",
     "hero_tour_dates_JQ9wQW",
-    "music_videos_ybcWY7",
-    "discography_mfLtHz"
+    "hero_discography_ra3CRw",
+    "hero_music_videos_zm9egb"
   ]
 }
