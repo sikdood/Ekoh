@@ -38,18 +38,6 @@
         "url_button_link": "/pages/tour"
       }
     },
-    "hero_discography_ra3CRw": {
-      "type": "hero_discography",
-      "settings": {
-        "text_headline": "Discography",
-        "text_button_text": "view all discography",
-        "url_button_link": "",
-        "url_spotify_profile": "",
-        "url_apple_profile": "",
-        "url_youtube_music_profile": "",
-        "url_tidal_profile": ""
-      }
-    },
     "hero_music_videos_zm9egb": {
       "type": "hero_music_videos",
       "settings": {
@@ -63,7 +51,6 @@
     "hero_release_4pLRDi",
     "hero_merch_CehFEG",
     "hero_tour_dates_JQ9wQW",
-    "hero_discography_ra3CRw",
     "hero_music_videos_zm9egb"
   ]
 }
