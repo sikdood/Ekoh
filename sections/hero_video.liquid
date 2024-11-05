@@ -1,6 +1,70 @@
-<div class="padding-global-2"><div class="container-large-2"><div class="header_hero-content"><div class="padding-section-large"><div class="max-width-medium"><div class="margin-bottom margin-small"><h1 li-settings="Title" class="heading-style-h1 text-align-center">
+<div class="padding-global"><div class="container-large"><h1 class="heading-style-h1 text-align-center">
+{{ section.settings.text_headline }}
 </h1>
-</div><div class="margin-top margin-medium flex-center"><div class="button-group-3"><a li-setting:text="Button Text" href="{{ section.settings.url_button_link }}" class="button w-button"> Button </a>
-</div></div></div></div></div></div></div><div class="header_background-video-wrapper"><div class="video-overlay-layer"></div><div li-settings="video" class="w-embed-youtubevideo header_background-video">
-</div>
-</div> {% schema %} {"tag":"header","name":"Hero Video","class":"section_header-hero-video text-color-alternate","settings":[{"id":"url_button_link","type":"url","label":"Button Link"}],"presets":[{"name":"Hero Video","category":"Liquify"}]} {% endschema %}
+<div class="w-embed"><style>.wrapper {
+	max-width: 100%;
+}
+.youtube {
+	background-color: #000;
+	margin-bottom: 0px;
+	position: relative;
+	padding-top: 56.25%;
+	overflow: hidden;
+	cursor: pointer;
+}
+.youtube img {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+	left: 0;
+	opacity: 1;
+}
+.youtube .play-button {
+	width: 5rem;
+	height: 5rem;
+	background-color: none;
+	z-index: 1;
+	opacity: 1;
+  border-color: white;
+  border-style: solid;
+	border-radius: 100%;
+}
+.youtube .play-button:before {
+	content: "";
+	border-style: solid;
+  border-width: 15px 0 15px 26px;
+	border-color: transparent transparent transparent white;
+}
+.youtube img,
+.youtube .play-button {
+	cursor: pointer;
+}
+.youtube img,
+.youtube iframe,
+.youtube .play-button,
+.youtube .play-button:before {
+	position: absolute;
+}
+.youtube .play-button,
+.youtube .play-button:before {
+	top: 50%;
+	left: 50%;
+	transform: translate3d( -50%, -50%, 0 );
+}
+.youtube iframe {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+</style></div><div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">{% for article in blogs['release'].articles limit:4 %}  {% if article.metafields.custom.youtube %}
+    <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item-2 w-dyn-item">
+            {% assign youtube_url = article.metafields.custom.youtube %}
+{% assign youtube_id = youtube_url | split: 'v=' | last | split: '&' | first %}
+
+                      
+                            <div id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a"><div class="video-embed w-embed"><div class="wrapper"><div class="youtube" data-embed="{{ youtube_id }}"><div class="play-button"></div></div></div></div></div>
+                            
+                        </div>
+{% endif %}{% endfor %}</div></div></div></div> {% schema %} {"tag":"div","name":"Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Music Videos","category":"Liquify"}]} {% endschema %}
