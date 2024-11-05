@@ -58,6 +58,13 @@
 	top: 0;
 	left: 0;
 }
-</style></div><div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">{% if article.metafields.custom.youtube %}    <div li-if="article.metafields.custom.youtube" li-for:wrapper="article in blogs['release'].articles" role="listitem" class="collection-item-2 w-dyn-item" wrapper="article in blogs['release'].articles">
-    <div id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a"><div class="video-embed w-embed"><div class="wrapper"><div class="youtube" data-embed="u7zm19YgQBA"><div class="play-button"></div></div></div></div></div>    </div>
-{% endif %}</div><div class="empty-state-2 w-dyn-empty"></div></div></div></div> {% schema %} {"tag":"div","name":"Hero Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Hero Music Videos","category":"Liquify"}]} {% endschema %}
+</style></div><div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">{% for article in blogs['release'].articles limit:4 %}  {% if article.metafields.custom.youtube %}
+    <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item-2 w-dyn-item">
+            {% assign youtube_url = article.metafields.custom.youtube %}
+{% assign youtube_id = youtube_url | split: 'v=' | last | split: '&' | first %}
+
+                      
+                            <div id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a"><div class="video-embed w-embed"><div class="wrapper"><div class="youtube" data-embed="{{ youtube_id }}"><div class="play-button"></div></div></div></div></div>
+                            
+                        </div>
+{% endif %}{% endfor %}</div></div></div></div> {% schema %} {"tag":"div","name":"Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Music Videos","category":"Liquify"}]} {% endschema %}
