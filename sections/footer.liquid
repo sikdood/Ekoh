@@ -1,16 +1,18 @@
-<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_link-list">
-    <h4>SHOP</h4>
-    {% for link in linklists['footer'].links %}
-        <div>
-            {% for child_link in link.links %}
-                <a href="{{ child_link.url }}" class="text-size-regular">{{ child_link.title }}</a>
-            {% endfor %}
-        </div>
-    {% endfor %}
-</div>
+<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_member-wrapper"><div class="footer_link-grid">
+                                                                                                                                                                                                                              
+  {% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" class="footer_link-list">
+                                    
+                            <h4>SHOP</h4>
                             
-                 
-<div id="w-node-c55f315b-8865-8ac9-f247-c11e9a5d1796-cf39daf1" class="footer_link-list"><h4>INFO</h4></div><div id="w-node-_71902a73-c134-9e72-53d3-3bb448ecd259-cf39daf1" class="footer_link-list"><h4>SUPPORT</h4></div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h4>
+                            {% for child_link in link.links %}    
+                                    
+                            <a href="{{ child_link.url }}" class="text-size-regular">{{ child_link.title }}</a>
+                            
+                        
+{% endfor %}
+                            
+                        </div>
+{% endfor %}<div id="w-node-c55f315b-8865-8ac9-f247-c11e9a5d1796-cf39daf1" class="footer_link-list"><h4>INFO</h4></div><div id="w-node-_71902a73-c134-9e72-53d3-3bb448ecd259-cf39daf1" class="footer_link-list"><h4>SUPPORT</h4></div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h4>
 {{ section.settings.text_newsletter_headline }}
 </h4>
 <div class="footer_form-block w-form">{% form 'customer', return_to: '/', class: 'footer_form' %}
