@@ -15,7 +15,7 @@
                         </div>
 {% endfor %}</div><div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0a-cda6679f" class="cart_wrapper-right"><div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0b-cda6679f" class="cart_table outline-solid-1"><div class="cart_grid is-header w-hidden-tiny"><div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0d-cda6679f" class="cart_table-header"><p class="text-size-regular">Summary</p></div></div><div class="cart_content"><div class="cart_wrapper"><div class="cart_details-wrapper"><div class="text-size-regular">Sum <span class="text-size-tiny">(inkl. MwSt.)</span></div><div class="cart_details-price">{% if cart.total_discounts > 0 %}    <div li-if="cart.total_discounts > 0">
     <div li-object="cart.original_total_price | money" class="text-style-strikethrough">{{ cart.original_total_price | money }}</div>    </div>
-{% endif %}<div li-object="cart.total_price | money" class="heading-style-h3">{{ cart.total_price | money }}</div></div></div>{% if cart.total_discounts > 0 %}    <div li-if="cart.total_discounts > 0" class="cart_details-wrapper">
+{% endif %}<div li-object="cart.total_price | money">{{ cart.total_price | money }}</div></div></div>{% if cart.total_discounts > 0 %}    <div li-if="cart.total_discounts > 0" class="cart_details-wrapper">
     <div class="text-size-regular">Discount</div><div li-object="cart.total_discount | money">{{ cart.total_discount | money }}</div>    </div>
 {% endif %}</div><div class="cart_action"><input type="submit" data-wait="Please wait..." class="button w-button" value="Checkout" name="checkout">
 <input type="submit" data-wait="Please wait..." class="button is-outline w-button" value="Update cart">

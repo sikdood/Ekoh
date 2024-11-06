@@ -16,7 +16,7 @@
 {% endif %}{% if predictive_search.resources.products.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 %}    <div li-if="predictive_search.resources.products.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0" class="predictive-search_topic">
     <div class="predictive-search_headline"><div class="text-style-muted">Products</div></div><ul role="list" class="predictive-search_product-list w-list-unstyled">{% for product in predictive_search.resources.products %}    <li li-for="product in predictive_search.resources.products" class="predictive-search_produt-item">
                                     
-                            <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block"><div class="predictive-search_image-wrapper"><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" src="{{ product.featured_media | image_url: width: 150 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="predictive-search_image">
+                            <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block"><div class="predictive-search_image-wrapper"><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_media | image_url: width: 150 }}" loading="lazy" class="predictive-search_image">
 </div><div class="predictive-search_product-info"><div class="text-size-regular text-weight-bold"><span li-object="product.title">{{ product.title }}</span></div><div class="text-size-small"><span li-object="product.price | money">{{ product.price | money }}</span></div></div></a>
                             
                         </li>
@@ -34,8 +34,8 @@
 {% endif %}    </div>
 {% endif %}{% unless predictive_search.performed %}    <div li-unless="predictive_search.performed">
     <div class="predictive-search_overflow"><div><div><div class="predictive-search_topic"><div class="predictive-search_headline"><div class="text-style-muted">Suggestions</div></div><ul role="list" class="predictive-search_list w-list-unstyled">{% for block in section.blocks %}
-    {% if block.type == "vorschlaege" %}
-                    <li li-block="Vorschlaege" class="predictive-search_item">
+    {% if block.type == "suggestion" %}
+                    <li li-block="Suggestion" class="predictive-search_item">
                                     <a href="{{ block.settings.url_link }}" class="predictive-search_link w-inline-block"> <div>{{ block.settings.text_text }}</div> </a>
 
                             </li>
@@ -44,10 +44,10 @@
 </ul></div><div class="predictive-search_topic"><div class="predictive-search_headline"><div class="text-style-muted">Bestseller</div></div><ul role="list" class="predictive-search_product-list w-list-unstyled">{% for product in section.settings.collection_bestseller.products limit: section.settings.collection_bestseller_limit %}
 <li class="predictive-search_produt-item">
     
-    <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block"><div class="predictive-search_image-wrapper"><img li-object:src="product.featured_image | img_url: 'master'" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | img_url: 'master' }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="predictive-search_image">
+    <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block"><div class="predictive-search_image-wrapper"><img li-object:src="product.featured_image | img_url: 'master'" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_image | img_url: 'master' }}" loading="lazy" class="predictive-search_image">
 </div><div class="predictive-search_product-info"><div class="text-size-regular text-weight-bold"><span li-object="product.title">{{ product.title }}</span></div><div class="text-size-small"><span li-object="product.price | money">{{ product.price | money }}</span></div></div></a>
     
 </li>
 {% endfor %}
 </ul></div></div></div></div>    </div>
-{% endunless %} {% schema %} {"tag":"div","name":"predictive_search","blocks":[{"name":"Vorschlaege","type":"vorschlaege","settings":[{"id":"url_link","type":"url","label":"Link"},{"id":"text_text","type":"text","label":"Text","default":"Tag"}]}],"settings":[{"id":"collection_bestseller","type":"collection","label":"Bestseller"},{"type":"range","id":"collection_bestseller_limit","min":1,"max":99,"step":1,"label":"Limit: Bestseller","default":6}],"presets":[{"name":"predictive_search","category":"Liquify"}]} {% endschema %}
+{% endunless %} {% schema %} {"tag":"div","name":"predictive_search","blocks":[{"name":"Suggestion","type":"suggestion","settings":[{"id":"url_link","type":"url","label":"Link"},{"id":"text_text","type":"text","label":"Text","default":"Tag"}]}],"settings":[{"id":"collection_bestseller","type":"collection","label":"Bestseller"},{"type":"range","id":"collection_bestseller_limit","min":1,"max":99,"step":1,"label":"Limit: Bestseller","default":6}],"presets":[{"name":"predictive_search","category":"Liquify"}]} {% endschema %}
