@@ -1,14 +1,12 @@
-<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_member-wrapper"><div class="footer_link-grid">
-                                                                                                                                                                                                                              
-  {% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" class="footer_link-list">
+<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_member-wrapper"><div class="footer_link-grid">{% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" class="footer_link-list">
                                     
                             <h4>SHOP</h4>
                             
-                            {% for child_link in link.links %}    
+                            {% for child_link in link.links %}    <div li-for="child_link in link.links">
                                     
-                            <a href="{{ child_link.url }}" class="text-size-regular">{{ child_link.title }}</a>
+                            <a li-object:href="child_link.url" li-object="child_link.title" href="{{ child_link.url }}" class="text-size-regular">{{ child_link.title }}</a>
                             
-                        
+                        </div>
 {% endfor %}
                             
                         </div>
