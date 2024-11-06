@@ -2,25 +2,10 @@
                                     
                             <h4>SHOP</h4>
                             
-                            {% for child_link in link.links %}    <div li-for="child_link in link.links">
-                                    
-                            <a li-object:href="child_link.url" li-object="child_link.title" href="{{ child_link.url }}" class="text-size-regular">{{ child_link.title }}</a>
+                            <div><a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a></div>
                             
                         </div>
-{% endfor %}
-                            
-                        </div>
-{% endfor %}{% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" id="w-node-c55f315b-8865-8ac9-f247-c11e9a5d1796-cf39daf1" class="footer_link-list">
-                                    
-                            <h4>INFO</h4>
-                            
-                        </div>
-{% endfor %}{% for link in linklists['footer'].links %}    <div li-for="link in linklists['footer'].links" id="w-node-_71902a73-c134-9e72-53d3-3bb448ecd259-cf39daf1" class="footer_link-list">
-                                    
-                            <h4>SUPPORT</h4>
-                            
-                        </div>
-{% endfor %}</div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h4>
+{% endfor %}<div id="w-node-c55f315b-8865-8ac9-f247-c11e9a5d1796-cf39daf1" class="footer_link-list"><h4>INFO</h4></div><div id="w-node-_71902a73-c134-9e72-53d3-3bb448ecd259-cf39daf1" class="footer_link-list"><h4>SUPPORT</h4></div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h4>
 {{ section.settings.text_newsletter_headline }}
 </h4>
 <div class="footer_form-block w-form">{% form 'customer', return_to: '/', class: 'footer_form' %}
@@ -35,11 +20,7 @@
 <div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="error-message w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="footer_trennlinie"></div><div class="padding-global"><div class="container-large padding-vertical padding-large"><div class="footer_grid-payment"><div class="payment-wrapper hide"><div class="text-size-regular text-color-white">Delivery</div><div class="payment-icons">{% for block in section.blocks %}
     {% if block.type == "lieferung-icon" %}
                     <div li-block="Lieferung-icon">
-                                    <div><img class="footer_payment-icon"
-     alt="{{ block.settings.image_icon.alt }}"
-
-     src="{{ block.settings.image_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icon.alt }}" class="footer_payment-icon"}
->
+                                    <div><img src="{{ block.settings.image_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icon.alt }}" class="footer_payment-icon"}>
 </div>
                             </div>
             {% endif %}
@@ -52,7 +33,7 @@
 {% endfor %}</ul></div><div class="payment-wrapper"><div class="text-size-regular text-color-white hide">Social Media</div><div class="payment-icons is-social">{% for block in section.blocks %}
     {% if block.type == "social-media" %}
                     <div li-block="Social-media">
-                                    <a href="{{ block.settings.url_social_link }}" target="_blank" class="w-inline-block"> <img class="footer_social-icon" alt="{{ block.settings.image_social_icon.alt }}" src="{{ block.settings.image_social_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_social_icon.alt }}" class="footer_social-icon"}> </a>
+                                    <a href="{{ block.settings.url_social_link }}" target="_blank" class="w-inline-block"> <img src="{{ block.settings.image_social_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_social_icon.alt }}" class="footer_social-icon"}> </a>
 
                             </div>
             {% endif %}
