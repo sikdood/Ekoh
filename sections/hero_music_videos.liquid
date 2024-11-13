@@ -71,8 +71,8 @@
                 {% assign counter = 0 %}
                 {% for article in blogs['Release'].articles %}
                     {% if counter < limit %}
-                        {% if article.metafields.custom.youtube %}
-                            <div li-if:inside="article.metafields.custom.youtube" li-for="article in blogs['release'].articles" role="listitem" class="collection-item-2 w-dyn-item" inside="1">
+                        {% if article.metafields.custom.thumbnail %}
+                            <div li-if:inside="article.metafields.custom.video_url" li-for="article in blogs['release'].articles" role="listitem" class="collection-item-2 w-dyn-item" inside="1">
                                 <div id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a">
                                     <div class="video-embed w-embed">
                                         <div class="wrapper">
