@@ -1,65 +1,97 @@
-<div class="padding-global"><div class="container-large"><h1 class="heading-style-h1 text-align-center">
-{{ section.settings.text_headline }}
-</h1>
-<div class="w-embed"><style>.wrapper {
-	max-width: 100%;
-}
-.youtube {
-	background-color: #000;
-	margin-bottom: 0px;
-	position: relative;
-	padding-top: 56.25%;
-	overflow: hidden;
-	cursor: pointer;
-}
-.youtube img {
-	width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-	left: 0;
-	opacity: 1;
-}
-.youtube .play-button {
-	width: 5rem;
-	height: 5rem;
-	background-color: none;
-	z-index: 1;
-	opacity: 1;
-  border-color: white;
-  border-style: solid;
-	border-radius: 100%;
-}
-.youtube .play-button:before {
-	content: "";
-	border-style: solid;
-  border-width: 15px 0 15px 26px;
-	border-color: transparent transparent transparent white;
-}
-.youtube img,
-.youtube .play-button {
-	cursor: pointer;
-}
-.youtube img,
-.youtube iframe,
-.youtube .play-button,
-.youtube .play-button:before {
-	position: absolute;
-}
-.youtube .play-button,
-.youtube .play-button:before {
-	top: 50%;
-	left: 50%;
-	transform: translate3d( -50%, -50%, 0 );
-}
-.youtube iframe {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-</style></div><div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items"><div li-if:inside="article.metafields.custom.youtube" li-for="article in blogs['release'].articles" role="listitem" class="collection-item-2 w-dyn-item" inside="1">
-        {% if article.metafields.custom.youtube %}
-            <div id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a"><div class="video-embed w-embed"><div class="wrapper"><div class="youtube" data-embed="u7zm19YgQBA"><div class="play-button"></div></div></div></div></div>        {% endif %}
+<div class="padding-global">
+    <div class="container-large">
+        <h1 class="heading-style-h1 text-align-center">
+            {{ section.settings.text_headline }}
+        </h1>
+        <div class="w-embed">
+            <style>
+                .wrapper {
+                    max-width: 100%;
+                }
+                .youtube {
+                    background-color: #000;
+                    margin-bottom: 0px;
+                    position: relative;
+                    padding-top: 56.25%;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                .youtube img {
+                    width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+                .youtube .play-button {
+                    width: 5rem;
+                    height: 5rem;
+                    background-color: none;
+                    z-index: 1;
+                    opacity: 1;
+                border-color: white;
+                border-style: solid;
+                    border-radius: 100%;
+                }
+                .youtube .play-button:before {
+                    content: "";
+                    border-style: solid;
+                border-width: 15px 0 15px 26px;
+                    border-color: transparent transparent transparent white;
+                }
+                .youtube img,
+                .youtube .play-button {
+                    cursor: pointer;
+                }
+                .youtube img,
+                .youtube iframe,
+                .youtube .play-button,
+                .youtube .play-button:before {
+                    position: absolute;
+                }
+                .youtube .play-button,
+                .youtube .play-button:before {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate3d( -50%, -50, 0 );
+                }
+                .youtube iframe {
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            </style>
+        </div>
+
+        <div class="collection-list-wrapper w-dyn-list">
+            <div role="list" class="collection-list-2 w-dyn-items">
+                {% assign limit = 3 %}
+                {% assign counter = 0 %}
+                {% for article in blogs['Release'].articles %}
+                    {% if counter < limit %}
+                        {% if article.metafields.custom.youtube %}
+                            <div li-if:inside="article.metafields.custom.youtube" li-for="article in blogs['release'].articles" role="listitem" class="collection-item-2 w-dyn-item" inside="1">
+                                <div id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a">
+                                    <div class="video-embed w-embed">
+                                        <div class="wrapper">
+                                            <div class="youtube" data-embed="u7zm19YgQBA">
+                                                <div class="play-button"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div>
+                            {% assign counter = counter | plus: 1 %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="empty-state-2 w-dyn-empty"></div>
+        </div>
     </div>
-</div><div class="empty-state-2 w-dyn-empty"></div></div></div></div> {% schema %} {"tag":"div","name":"Hero Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Hero Music Videos","category":"Liquify"}]} {% endschema %}
+</div> 
+
+{% schema %} {"tag":"div","name":"Hero Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Hero Music Videos","category":"Liquify"}]} {% endschema %}
