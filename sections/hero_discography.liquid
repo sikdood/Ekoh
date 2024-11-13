@@ -66,7 +66,7 @@
                 <div class="w-dyn-list">
                     <div role="list" class="collection-list w-dyn-items">
                         {% for article in section.settings.blog.articles %}
-                            {% if article.image %}    
+                            {% comment %} {% if article.image %}     {% endcomment %}
                                 <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item w-dyn-item">                 
                                     <div li-if="article.image" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b0d-f4a56b0d" class="div-block-4">
                                         <img src="{{ article.image | img_url: 'master' }}" loading="eager" data-w-id="717e04f4-8ed8-1372-2692-366ef4a56b0e" li-object:src="article.image | img_url: 'master'" alt="{{ article.alt }}" li-object:alt="article.alt" class="image">
@@ -121,9 +121,7 @@
                                                                 {% if article.metafields.custom.youtube-music %}
                                                                     <a li-if="article.metafields.custom.youtube-music" li-object:href="article.metafields.custom.youtube-music" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b29-f4a56b0d" href="article.metafields.custom.youtube-music" target="_blank" class="icon-1x1-large w-inline-block">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewbox="0 0 1024 1024" app="ikonik" class="ikonik-uowcl">
-                                                                            <path fill="currentColor" d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.
-                                                                                9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z" app="ikonik" class="path-9w458">
-                                                                            </path>
+                                                                            <path fill="currentColor" d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z" app="ikonik" class="path-9w458"></path>
                                                                         </svg>
                                                                     </a>
                                                                 {% endif %}
@@ -202,7 +200,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                            {% endif %}
+                            {% comment %} {% endif %} {% endcomment %}
                         {% endfor %}
                     </div>
                     <div class="empty-state w-dyn-empty">
