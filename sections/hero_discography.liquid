@@ -63,7 +63,7 @@
             <div id="w-node-_1898c654-61fb-73de-dff6-4ce60390445d-cda66762" class="div-block-2">
                 <div class="w-dyn-list">
                     <div role="list" class="collection-list w-dyn-items">
-                        {% for article in section.settings.blog.articles limit: section.settings.article_limit %}
+                        {% for article in section.settings.blog.articles limit: 3 %}
                             {% if article.image %}    
                                 <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item w-dyn-item">                 
                                     <div li-if="article.image" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b0d-f4a56b0d" class="div-block-4">
