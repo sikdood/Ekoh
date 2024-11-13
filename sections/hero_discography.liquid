@@ -227,9 +227,11 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                    <div class="empty-state w-dyn-empty">
-                        <div>No items found.</div>
-                    </div>
+                    {% if counter == 0 %}
+                        <div class="empty-state w-dyn-empty">
+                            <div>No items found.</div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
