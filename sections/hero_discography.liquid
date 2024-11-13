@@ -67,8 +67,8 @@
             <div id="w-node-_1898c654-61fb-73de-dff6-4ce60390445d-cda66762" class="div-block-2">
                 <div class="w-dyn-list">
                     <div role="list" class="collection-list w-dyn-items">
-                        {% for article in section.settings.blog.articles %}
-                            {% comment %} {% if article.image %}     {% endcomment %}
+                        {% for article in blog.articles %}
+                            {% if article.image %}    
                                 <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item w-dyn-item">                 
                                     <div li-if="article.image" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b0d-f4a56b0d" class="div-block-4">
                                         <img src="{{ article.image | img_url: 'master' }}" loading="eager" data-w-id="717e04f4-8ed8-1372-2692-366ef4a56b0e" li-object:src="article.image | img_url: 'master'" alt="{{ article.alt }}" li-object:alt="article.alt" class="image">
@@ -219,7 +219,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                            {% comment %} {% endif %} {% endcomment %}
+                            {% endif %}
                         {% endfor %}
                     </div>
                     <div class="empty-state w-dyn-empty">
