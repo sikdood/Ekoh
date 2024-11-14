@@ -1,25 +1,25 @@
-<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_member-wrapper"><div class="footer_link-grid">{% for link in linklists['shop'].links %}    <div li-for="link in linklists['shop'].links" class="footer_link-list">
+<div class="padding-global"><div class="container-large"></div></div><div class="footer_trennlinie"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_member-wrapper"><div class="footer_link-grid"><div class="footer_link-list"><h4>SHOP</h4>{% for link in linklists['support'].links %}    <div li-for="link in linklists['support'].links" class="footer-link-container">
                                     
-                            <h4>SHOP</h4>
+                            <a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a>
+                            
+                            <a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a>
+                            
+                            <a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a>
                             
                             <a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a>
                             
                         </div>
-{% endfor %}{% for link in linklists['info'].links %}    <div li-for="link in linklists['info'].links" id="w-node-c55f315b-8865-8ac9-f247-c11e9a5d1796-cf39daf1" class="footer_link-list">
+{% endfor %}</div><div id="w-node-c55f315b-8865-8ac9-f247-c11e9a5d1796-cf39daf1" class="footer_link-list"><h4>INFO</h4>{% for link in linklists['info'].links %}    <div li-for="link in linklists['info'].links">
                                     
-                            <h4>INFO</h4>
-                            
                             <a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a>
                             
                         </div>
-{% endfor %}{% for link in linklists['support'].links %}    <div li-for="link in linklists['support'].links" id="w-node-_71902a73-c134-9e72-53d3-3bb448ecd259-cf39daf1" class="footer_link-list">
+{% endfor %}</div><div id="w-node-_71902a73-c134-9e72-53d3-3bb448ecd259-cf39daf1" class="footer_link-list"><h4>SUPPORT</h4>{% for link in linklists['support'].links %}    <div li-for="link in linklists['support'].links">
                                     
-                            <h4>SUPPORT</h4>
-                            
                             <a li-object:href="link.url" li-object="link.title" href="{{ link.url }}" class="text-size-regular">{{ link.title }}</a>
                             
                         </div>
-{% endfor %}</div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h4>
+{% endfor %}</div></div><div id="w-node-_946c4dcd-3bf7-2b09-3073-715a0eb0badd-cf39daf1" class="footer_member"><h4>
 {{ section.settings.text_newsletter_headline }}
 </h4>
 <div class="footer_form-block w-form">{% form 'customer', return_to: '/', class: 'footer_form' %}
