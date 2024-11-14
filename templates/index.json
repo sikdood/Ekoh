@@ -29,6 +29,18 @@
         "collection_collection_limit": 4
       }
     },
+    "hero_discography_ixyE4p": {
+      "type": "hero_discography",
+      "settings": {
+        "text_headline": "Discography",
+        "text_button_text": "VIEW ALL MUSIC",
+        "url_button_link": "/pages/discography",
+        "url_spotify_profile": "https://open.spotify.com/artist/5lC7N2Mm9i92KSfW4opawO",
+        "url_apple_profile": "https://music.apple.com/us/artist/ekoh/551929795",
+        "url_youtube_music_profile": "https://www.youtube.com/channel/UCBLZeU9hBJ12LgdexUdOjpA",
+        "url_tidal_profile": "https://tidal.com/browse/artist/6160864"
+      }
+    },
     "hero_tour_dates_JQ9wQW": {
       "type": "hero_tour_dates",
       "settings": {
@@ -43,18 +55,6 @@
       "settings": {
         "text_headline": "Music Videos"
       }
-    },
-    "hero_discography_ixyE4p": {
-      "type": "hero_discography",
-      "settings": {
-        "text_headline": "Discography",
-        "text_button_text": "VIEW ALL MUSIC",
-        "url_button_link": "/pages/discography",
-        "url_spotify_profile": "https://open.spotify.com/artist/5lC7N2Mm9i92KSfW4opawO",
-        "url_apple_profile": "https://music.apple.com/us/artist/ekoh/551929795",
-        "url_youtube_music_profile": "https://www.youtube.com/channel/UCBLZeU9hBJ12LgdexUdOjpA",
-        "url_tidal_profile": "https://tidal.com/browse/artist/6160864"
-      }
     }
   },
   "layout": "theme",
@@ -63,7 +63,7 @@
     "hero_release_4pLRDi",
     "hero_merch_CehFEG",
     "hero_tour_dates_JQ9wQW",
-    "hero_music_videos_zm9egb",
-    "hero_discography_ixyE4p"
+    "hero_discography_ixyE4p",
+    "hero_music_videos_zm9egb"
   ]
 }
