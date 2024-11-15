@@ -9,7 +9,7 @@
 </div></div>{% assign limit = 3 %}
 {% assign counter = 0 %}
 <div id="w-node-_1898c654-61fb-73de-dff6-4ce60390445d-cda66762" class="div-block-2"><div class="w-dyn-list"><div role="list" class="collection-list w-dyn-items">{% for article in blogs['release'].articles %}         
-                            {% if counter < limit and article.image %}   <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item w-dyn-item">
+                              <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item w-dyn-item">
                                 <div li-if="counter < limit and article.image" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b0d-f4a56b0d" class="div-block-4">
     <div data-w-id="dca7c696-4d96-2ce6-e9d9-e136703a0b3f" class="target"></div><img src="{{ article.image | img_url: 'master' }}" loading="eager" li-object:src="article.image | img_url: 'master'" li-object:alt="article.alt" alt="{{ article.alt }}" class="image">
 <div class="modal1_component"><div class="modal1_content-wrapper"><a data-w-id="717e04f4-8ed8-1372-2692-366ef4a56b11" href="#" class="modal1_close-button w-inline-block"><img src="{{ 'icon_close-modal-white.svg' | asset_url }}" loading="lazy" alt="" class="hide-mobile-landscape">
@@ -34,7 +34,7 @@
  </div></div></div></div></div><div data-w-id="717e04f4-8ed8-1372-2692-366ef4a56b41" class="modal1_background-overlay"></div></div><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="64" height="64" fill="currentColor" app="ikonik" class="play-icon"><path d="M7.75194 5.43872L18.2596 11.5682C18.4981 11.7073 18.5787 12.0135 18.4396 12.252C18.3961 12.3265 18.3341 12.3885 18.2596 12.432L7.75194 18.5615C7.51341 18.7006 7.20725 18.62 7.06811 18.3815C7.0235 18.305 7 18.2181 7 18.1296V5.87061C7 5.59446 7.22386 5.37061 7.5 5.37061C7.58853 5.37061 7.67547 5.39411 7.75194 5.43872Z" app="ikonik"></path></svg>
     </div>
 {% assign counter = counter | plus: 1 %}                               
-{% endif %}  {% endif %}
+  {% endif %}
                             
                         </div>
 {% endfor %}</div><div class="empty-state w-dyn-empty"><div>No items found.</div></div></div></div></div></div></div> {% schema %} {"tag":"div","name":"Hero Discography","class":"section_discography padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Discography"},{"id":"text_button_text","type":"text","label":"Button Text","default":"view all discography"},{"id":"url_button_link","type":"url","label":"Button Link"},{"id":"url_spotify_profile","type":"url","label":"Spotify Profile"},{"id":"url_apple_profile","type":"url","label":"Apple Profile"},{"id":"url_youtube_music_profile","type":"url","label":"Youtube Music Profile"},{"id":"url_tidal_profile","type":"url","label":"Tidal Profile"}],"presets":[{"name":"Hero Discography","category":"Liquify"}]} {% endschema %}
