@@ -4756,6 +4756,8 @@ figcaption {
   }
 
   .nav_component {
+    background-color: var(--black);
+    background-image: none;
     min-height: 5rem;
   }
 
@@ -4779,18 +4781,22 @@ figcaption {
   }
 
   .nav_menu.is-page-height-tablet {
+    z-index: 0;
     border-bottom-color: var(--base-color-neutral--neutral-lightest);
     background-color: var(--base-color-neutral--white);
+    color: var(--black);
     width: 100vw;
     max-height: 90vh;
-    padding-bottom: 3.9rem;
+    padding-top: 3rem;
     padding-right: 5%;
+    font-family: Bebas Neue, sans-serif;
     transition: height .5s;
     position: absolute;
     overflow: auto;
   }
 
   .nav_menu-dropdown {
+    color: var(--black);
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -4812,7 +4818,12 @@ figcaption {
     display: flex;
   }
 
+  .nav_dropdown-toggle.w--open {
+    color: var(--black);
+  }
+
   .dropdown-icon {
+    color: var(--black);
     width: 1.5rem;
     height: 1.5rem;
     margin-top: 0;
@@ -4834,7 +4845,9 @@ figcaption {
   }
 
   .nav_dropdown-list.no-scrollbar.w--open {
+    text-align: left;
     max-height: none;
+    position: relative;
   }
 
   .nav_dropdown-link {
@@ -4966,6 +4979,7 @@ figcaption {
   .nav_dropdown-grid {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
+    flex: 1;
     grid-template-columns: 1fr;
   }
 
@@ -5273,6 +5287,15 @@ figcaption {
     margin-bottom: 0%;
     inset: auto 0% 0%;
   }
+
+  .nav-edgecontainer {
+    z-index: 30;
+    top: auto;
+  }
+
+  .mobile-nav {
+    color: #000;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5471,10 +5494,6 @@ figcaption {
 
   .nav_logo-link {
     padding-left: 0;
-  }
-
-  .nav_menu.is-page-height-tablet {
-    padding-bottom: 6rem;
   }
 
   .nav_dropdown-link_child {
@@ -5987,7 +6006,7 @@ figcaption {
   }
 
   .nav_dropdown-toggle {
-    border-top: 1px solid var(--base-color-neutral--neutral-lightest);
+    border: 1px #000;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
     font-size: 1.3rem;
@@ -6232,7 +6251,7 @@ figcaption {
   place-self: center start;
 }
 
-#w-node-fd87d5d8-8c6b-1eca-eca8-fdcf3f76b9b3-b641c10b, #w-node-_934bb582-3918-b82b-57b6-3739ff4111ea-b641c10b, #w-node-_1bcfee4e-a11c-2610-d9ea-8d92a853bd8c-b641c10b {
+#w-node-fd87d5d8-8c6b-1eca-eca8-fdcf3f76b9b3-b641c10b {
   justify-self: start;
 }
 
