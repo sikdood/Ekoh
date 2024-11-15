@@ -849,6 +849,10 @@ figcaption {
   background-color: var(--brand);
 }
 
+.button.max-width-full.margin-vertical.margin-large.orange.no-round {
+  border-radius: 0;
+}
+
 .button.is-link {
   color: var(--base-color-neutral--black);
   background-color: #0000;
@@ -4277,7 +4281,7 @@ figcaption {
   background-color: #0000;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
 }
 
 .code-embed-2 {
@@ -4543,6 +4547,22 @@ figcaption {
   z-index: 100;
   position: absolute;
   inset: 0%;
+}
+
+.main-wrapper-home {
+  flex-direction: column;
+  margin-top: -81px;
+  padding-top: 0;
+  display: flex;
+}
+
+.main-wrapper-home.white-background {
+  background-color: var(--base-color-neutral--white);
+  color: var(--text-color--text-primary);
+}
+
+.main-wrapper-home.home {
+  margin-top: -81px;
 }
 
 @media screen and (max-width: 991px) {
