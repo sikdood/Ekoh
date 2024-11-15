@@ -40,8 +40,11 @@
           "suggestion_QwpydP",
           "suggestion_bUD98L"
         ],
-        "custom_css": [],
+        "custom_css": [
+          ".nav_search-icon {z-index: 999; }"
+        ],
         "settings": {
+          "richtext_banner_text": "<p>Medium length banner heading with link goes here</p>",
           "collection_bestseller": "all",
           "collection_bestseller_limit": 6
         }
@@ -51,6 +54,10 @@
         "settings": {
           "text_newsletter_headline": "Newsletter",
           "text_checkbox": "By subscribing you agree to with our <a href=\"#\"><span class=\"text-color-white text-style-link\">Privacy Policy</span></a> and provide consent to receive updates from our company.",
+          "url_instagram": "",
+          "url_facebook": "",
+          "url_tik_tok": "",
+          "url_youtube": "",
           "richtext_signature": "<p>\n            All Rights REserved 2024 | SIKDOOD\n          </p>"
         }
       }
