@@ -12,7 +12,7 @@
     "hero_video_mqqDyK": {
       "type": "hero_video",
       "custom_css": [
-        ".section_header-hero-video.text-color-alternate {margin-top: -81px;}"
+        ".section_header-hero-video.text-color-alternate {margin-top: -50px;}"
       ],
       "settings": {
         "text_heading": "New Music Video",
