@@ -11,9 +11,7 @@
   "sections": {
     "product_hero": {
       "type": "product_hero",
-      "custom_css": [
-        ".form-input.is-quantity {color: white;}"
-      ],
+      "custom_css": [],
       "settings": {
         "text_headline": "Description"
       }
@@ -21,7 +19,9 @@
     "product_recommended": {
       "type": "product_recommended",
       "settings": {
-        "text_headline": "Recommended"
+        "text_headline": "Recommended",
+        "url_button_link": "",
+        "text_button_text": "ALL MERCH"
       }
     }
   },
