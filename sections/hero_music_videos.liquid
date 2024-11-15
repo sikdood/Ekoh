@@ -63,8 +63,10 @@
 <div class="collection-list-wrapper w-dyn-list"><div role="list" class="collection-list-2 w-dyn-items">{% for article in blogs['release'].articles %}    <div li-for="article in blogs['release'].articles" role="listitem" class="collection-item-2 w-dyn-item">
                                     
                             {% if counter < limit and article.metafields.custom.thumbnail %}    <div li-if="counter < limit and article.metafields.custom.thumbnail" id="w-node-f72f2459-e015-7bef-ce21-7d16947ef42a-947ef42a">
-    <div class="video-embed w-embed"><div class="wrapper"><div class="youtube" data-embed="u7zm19YgQBA"><div class="play-button"></div></div></div></div>    </div>
+    <div class="video-embed w-embed"><div class="wrapper"><div class="youtube" data-embed="u7zm19YgQBA"><div class="play-button"></div></div></div></div>{% assign counter = counter | plus: 1 %}
+    </div>
 {% endif %}
                             
                         </div>
-{% endfor %}</div><div class="empty-state-2 w-dyn-empty"></div></div><div class="container-large"></div></div> {% schema %} {"tag":"div","name":"Hero Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"}],"presets":[{"name":"Hero Music Videos","category":"Liquify"}]} {% endschema %}
+{% endfor %}</div><div class="empty-state w-dyn-empty"></div></div><div class="container-large"></div><a id="w-node-_11072f69-bd96-f690-eb02-63957b53029a-cda66762" href="{{ section.settings.url_button_link }}" class="button max-width-full margin-vertical margin-large orange no-round w-button"> {{ section.settings.text_button_text }} </a>
+</div> {% schema %} {"tag":"div","name":"Hero Music Videos","class":"section_videos padding-vertical padding-large","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Music Videos"},{"id":"text_button_text","type":"text","label":"Button Text","default":"VIP\u00a0TICKETS AVAILABLE HERE"},{"id":"url_button_link","type":"url","label":"Button Link"}],"presets":[{"name":"Hero Music Videos","category":"Liquify"}]} {% endschema %}
