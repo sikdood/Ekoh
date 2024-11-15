@@ -75,6 +75,14 @@
       sikVideo.style.opacity = "1";
     }, 100); // Small delay to ensure video loads before fade-in
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.host + '"])');
+    links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+    });
+});
 </script>
 </body>
 </html>
