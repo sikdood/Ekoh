@@ -12,7 +12,7 @@
     "hero_video_mqqDyK": {
       "type": "hero_video",
       "custom_css": [
-        ".main-wrapper {flex-direction: column; display: flex; margin-top: -81px;}"
+        ".section_header-hero-video.text-color-alternate {margin-top: -81px;}"
       ],
       "settings": {
         "text_heading": "Heading",

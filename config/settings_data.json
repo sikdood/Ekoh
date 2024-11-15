@@ -8,5 +8,25 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {}
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "custom_css": [],
+        "settings": {
+          "collection_bestseller": "",
+          "collection_bestseller_limit": 6
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "text_newsletter_headline": "Newsletter",
+          "text_checkbox": "By subscribing you agree to with our <a href=\"#\"><span class=\"text-color-white text-style-link\">Privacy Policy</span></a> and provide consent to receive updates from our company.",
+          "richtext_signature": "<p>\n            All Rights REserved 2024 | SIKDOOD\n          </p>"
+        }
+      }
+    },
+    "content_for_index": []
+  }
 }
