@@ -467,6 +467,12 @@ figcaption {
   padding-right: 2.5rem;
 }
 
+.padding-global.max-width-full.align-center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .padding-global.padding-section-medium.product-recommendations {
   border: 1px #000;
 }
@@ -720,6 +726,7 @@ figcaption {
   flex-flow: column;
   min-height: 100vh;
   display: flex;
+  position: relative;
 }
 
 .li-styleguide_label {
@@ -744,6 +751,12 @@ figcaption {
   max-width: 85rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container-large.align-center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .form_message-error {
@@ -784,8 +797,8 @@ figcaption {
   justify-content: flex-start;
   align-items: center;
   padding: .75rem 1.5rem;
-  font-family: Ekohfromhell, sans-serif;
-  font-size: 1.5rem;
+  font-family: Bebas Neue, sans-serif;
+  font-size: 2rem;
   font-weight: 400;
   transition: all .2s;
   display: block;
@@ -1866,7 +1879,14 @@ figcaption {
 }
 
 .nav_dropdown-list.no-scrollbar.w--open {
+  z-index: 1;
+  background-color: #0000;
+  border-style: none;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
   top: 8rem;
+  overflow: visible;
 }
 
 .nav_dropdown-link {
@@ -2679,13 +2699,15 @@ figcaption {
 .nav_dropdown-grid {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
+  background-color: #fff;
+  border-radius: 10px;
   flex-direction: column;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: grid;
+  padding: 1rem;
+  font-family: Bebas Neue, sans-serif;
+  display: flex;
 }
 
 .nav_dropdown-grid.flexi {
