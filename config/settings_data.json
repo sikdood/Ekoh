@@ -41,10 +41,10 @@
           "suggestion_bUD98L"
         ],
         "custom_css": [
-          ".nav_search-icon {z-index: 999; }"
+          ".nav_search-icon {z-index: 999;}"
         ],
         "settings": {
-          "richtext_banner_text": "<p>Medium length banner heading with link goes here</p>",
+          "richtext_banner_text": "<p>PRESSURE IS OUT NOW | LISTEN HERE</p>",
           "collection_bestseller": "all",
           "collection_bestseller_limit": 6
         }
@@ -60,6 +60,10 @@
           "url_youtube": "",
           "richtext_signature": "<p>\n            All Rights REserved 2024 | SIKDOOD\n          </p>"
         }
+      },
+      "login": {
+        "type": "login",
+        "settings": {}
       }
     },
     "content_for_index": []
