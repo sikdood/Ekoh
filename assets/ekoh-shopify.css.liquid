@@ -4303,7 +4303,16 @@ figcaption {
   width: 100%;
 }
 
-.video_lightbox, .div-block-4 {
+.video_lightbox {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.div-block-4 {
+  z-index: 10;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -4528,6 +4537,12 @@ figcaption {
   grid-row-gap: .5rem;
   flex-flow: column;
   display: flex;
+}
+
+.target {
+  z-index: 100;
+  position: absolute;
+  inset: 0%;
 }
 
 @media screen and (max-width: 991px) {
