@@ -23,7 +23,7 @@
       "type": "hero_merch",
       "settings": {
         "text_headline": "Featured Merch",
-        "url_button_link": "",
+        "url_button_link": "shopify://collections/all",
         "text_button_text": "ALL MERCH",
         "collection_collection": "all",
         "collection_collection_limit": 4
