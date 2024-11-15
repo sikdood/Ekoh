@@ -1,16 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product_hero": {
-            "type": "product_hero"
-        },
-        "product_recommended": {
-            "type": "product_recommended"
-        }
+  "sections": {
+    "product_hero": {
+      "type": "product_hero",
+      "custom_css": [
+        ".form-input.is-quantity {color: white;}"
+      ],
+      "settings": {
+        "text_headline": "Description"
+      }
     },
-    "layout": "product",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "product_hero",
-        "product_recommended"
-    ]
+    "product_recommended": {
+      "type": "product_recommended",
+      "settings": {
+        "text_headline": "Recommended"
+      }
+    }
+  },
+  "layout": "product",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "product_hero",
+    "product_recommended"
+  ]
 }
