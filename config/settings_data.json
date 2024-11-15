@@ -45,7 +45,7 @@
           ".nav_search-icon {z-index: 999;}"
         ],
         "settings": {
-          "richtext_banner_text": "<p>PRESSURE IS OUT NOW | LISTEN HERE</p>",
+          "richtext_banner_text": "<p>PRESSURE IS OUT NOW | <a href=\"https://ffm.to/ekohpressure\" target=\"_blank\" title=\"https://ffm.to/ekohpressure\">LISTEN HERE</a></p>",
           "collection_bestseller": "all",
           "collection_bestseller_limit": 6
         }
