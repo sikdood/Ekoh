@@ -10,7 +10,7 @@
 {% assign counter = 0 %}
 <div id="w-node-_1898c654-61fb-73de-dff6-4ce60390445d-cda66762" class="div-block-2"><div class="w-dyn-list"><div role="list" class="collection-list w-dyn-items">{% for article in blogs['release'].articles %}    <div li-for="article in blogs['release'].articles limit:3" role="listitem" class="collection-item w-dyn-item">
                                     
-                            {% if counter < limit and article.image %}    <div li-if="counter < limit and article.image" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b0d-f4a56b0d" class="div-block-4">
+                            {% if article.image %}    <div li-if="counter < limit and article.image" id="w-node-_717e04f4-8ed8-1372-2692-366ef4a56b0d-f4a56b0d" class="div-block-4">
     <div data-w-id="dca7c696-4d96-2ce6-e9d9-e136703a0b3f" class="target"></div><img src="{{ article.image | img_url: 'master' }}" loading="eager" li-object:src="article.image | img_url: 'master'" li-object:alt="article.alt" alt="{{ article.alt }}" class="image">
 <div class="modal1_component"><div class="modal1_content-wrapper"><a data-w-id="717e04f4-8ed8-1372-2692-366ef4a56b11" href="#" class="modal1_close-button w-inline-block"><img src="{{ 'icon_close-modal-white.svg' | asset_url }}" loading="lazy" alt="" class="hide-mobile-landscape">
 <img src="{{ 'icon_close-modal.svg' | asset_url }}" loading="lazy" alt="" class="show-mobile-landscape">
