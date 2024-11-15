@@ -54,11 +54,11 @@
         "settings": {
           "text_newsletter_headline": "Newsletter",
           "text_checkbox": "By subscribing you agree to with our <a href=\"#\"><span class=\"text-color-white text-style-link\">Privacy Policy</span></a> and provide consent to receive updates from our company.",
-          "url_instagram": "",
-          "url_facebook": "",
-          "url_tik_tok": "",
-          "url_youtube": "",
-          "richtext_signature": "<p>\n            All Rights REserved 2024 | SIKDOOD\n          </p>"
+          "url_instagram": "https://www.instagram.com/ekohmusic/?hl=en",
+          "url_facebook": "https://www.facebook.com/ekohmusic/",
+          "url_tik_tok": "https://www.tiktok.com/@ekohmusic?lang=en",
+          "url_youtube": "https://www.youtube.com/channel/UCBLZeU9hBJ12LgdexUdOjpA",
+          "richtext_signature": "<p>All Rights Reserved 2024 Ekoh | <a href=\"https://sikdood.com\" target=\"_blank\" title=\"https://sikdood.com\">SIKDOOD</a><br/>          </p>"
         }
       },
       "login": {
