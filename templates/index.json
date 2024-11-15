@@ -11,10 +11,12 @@
   "sections": {
     "hero_video_mqqDyK": {
       "type": "hero_video",
+      "custom_css": [
+        ".main-wrapper {flex-direction: column; display: flex; margin-top: -81px;}"
+      ],
       "settings": {
         "text_heading": "Heading",
-        "text_title": "Medium length hero heading goes here",
-        "url_youtube": "https://www.youtube.com/watch?v=gL7rnDgxEBo&ab_channel=Ekoh"
+        "text_title": "Medium length hero heading goes here"
       }
     },
     "hero_merch_CehFEG": {
@@ -50,8 +52,7 @@
       "type": "hero_video",
       "settings": {
         "text_heading": "Heading",
-        "text_title": "Medium length hero heading goes here",
-        "url_youtube": "https://youtu.be/gL7rnDgxEBo"
+        "text_title": "Medium length hero heading goes here"
       }
     }
   },
