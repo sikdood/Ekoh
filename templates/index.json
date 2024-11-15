@@ -47,13 +47,6 @@
         "text_button_text": "VIP TICKETS AVAILABLE HERE",
         "url_button_link": "shopify://products/meet-and-greet"
       }
-    },
-    "hero_video_zp9AzL": {
-      "type": "hero_video",
-      "settings": {
-        "text_heading": "Heading",
-        "text_title": "Medium length hero heading goes here"
-      }
     }
   },
   "layout": "theme",
@@ -62,7 +55,6 @@
     "hero_video_mqqDyK",
     "hero_merch_CehFEG",
     "hero_release_4pLRDi",
-    "hero_tour_dates_JQ9wQW",
-    "hero_video_zp9AzL"
+    "hero_tour_dates_JQ9wQW"
   ]
 }

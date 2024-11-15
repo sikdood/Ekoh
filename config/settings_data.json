@@ -12,9 +12,37 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "suggestion_AUinkf": {
+            "type": "suggestion",
+            "settings": {
+              "url_link": "shopify://collections/jerseys",
+              "text_text": "Jerseys"
+            }
+          },
+          "suggestion_QwpydP": {
+            "type": "suggestion",
+            "settings": {
+              "url_link": "shopify://collections/tickets",
+              "text_text": "VIP Tickets"
+            }
+          },
+          "suggestion_bUD98L": {
+            "type": "suggestion",
+            "settings": {
+              "url_link": "shopify://collections/t-shirts",
+              "text_text": "T-Shirts"
+            }
+          }
+        },
+        "block_order": [
+          "suggestion_AUinkf",
+          "suggestion_QwpydP",
+          "suggestion_bUD98L"
+        ],
         "custom_css": [],
         "settings": {
-          "collection_bestseller": "",
+          "collection_bestseller": "all",
           "collection_bestseller_limit": 6
         }
       },
