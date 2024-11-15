@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "hero_video_mqqDyK": {
+      "type": "hero_video",
+      "settings": {
+        "text_heading": "Heading",
+        "text_title": "Medium length hero heading goes here"
+      }
+    },
     "hero_release_4pLRDi": {
       "type": "hero_release",
       "settings": {
@@ -55,23 +62,16 @@
       "settings": {
         "text_headline": "Music Videos"
       }
-    },
-    "hero_video_mqqDyK": {
-      "type": "hero_video",
-      "settings": {
-        "text_heading": "Heading",
-        "text_title": "Medium length hero heading goes here"
-      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "hero_release_4pLRDi",
+    "hero_video_mqqDyK",
     "hero_merch_CehFEG",
+    "hero_release_4pLRDi",
     "hero_tour_dates_JQ9wQW",
     "hero_discography_ixyE4p",
-    "hero_music_videos_zm9egb",
-    "hero_video_mqqDyK"
+    "hero_music_videos_zm9egb"
   ]
 }
