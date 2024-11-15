@@ -16,16 +16,6 @@
         "text_title": "Medium length hero heading goes here"
       }
     },
-    "hero_release_4pLRDi": {
-      "type": "hero_release",
-      "settings": {
-        "text_heading": "New Album",
-        "text_title": "Pressure",
-        "url_button_link": "https://ffm.to/ekohpressure",
-        "text_button_text": "Listen Now",
-        "image_release_cover": "shopify://shop_images/0x1900-000000-80-0-0_1.jpg"
-      }
-    },
     "hero_merch_CehFEG": {
       "type": "hero_merch",
       "settings": {
@@ -36,6 +26,16 @@
         "collection_collection_limit": 4
       }
     },
+    "hero_release_4pLRDi": {
+      "type": "hero_release",
+      "settings": {
+        "text_heading": "New Album",
+        "text_title": "Pressure",
+        "url_button_link": "https://ffm.to/ekohpressure",
+        "text_button_text": "Listen Now",
+        "image_release_cover": "shopify://shop_images/0x1900-000000-80-0-0_1.jpg"
+      }
+    },
     "hero_tour_dates_JQ9wQW": {
       "type": "hero_tour_dates",
       "settings": {
@@ -43,24 +43,6 @@
         "image_secondary_tour_image": "shopify://shop_images/DragMeFromHellTourMG2-1.webp",
         "text_button_text": "VIP TICKETS AVAILABLE HERE",
         "url_button_link": "/pages/tour"
-      }
-    },
-    "hero_discography_ixyE4p": {
-      "type": "hero_discography",
-      "settings": {
-        "text_headline": "Discography",
-        "text_button_text": "VIEW ALL MUSIC",
-        "url_button_link": "/pages/discography",
-        "url_spotify_profile": "https://open.spotify.com/artist/5lC7N2Mm9i92KSfW4opawO",
-        "url_apple_profile": "https://music.apple.com/us/artist/ekoh/551929795",
-        "url_youtube_music_profile": "https://www.youtube.com/channel/UCBLZeU9hBJ12LgdexUdOjpA",
-        "url_tidal_profile": "https://tidal.com/browse/artist/6160864"
-      }
-    },
-    "hero_music_videos_zm9egb": {
-      "type": "hero_music_videos",
-      "settings": {
-        "text_headline": "Music Videos"
       }
     }
   },
@@ -70,8 +52,6 @@
     "hero_video_mqqDyK",
     "hero_merch_CehFEG",
     "hero_release_4pLRDi",
-    "hero_tour_dates_JQ9wQW",
-    "hero_discography_ixyE4p",
-    "hero_music_videos_zm9egb"
+    "hero_tour_dates_JQ9wQW"
   ]
 }
