@@ -1,10 +1,11 @@
-<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
+<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="product_heading-wrapper"><div class="product_heading"><div class="max-width-large"><h1 data-w-id="b639d279-c3a9-3849-6208-e436263098af" style="color: {{ shop.brand.colors.primary[0].foreground }}" class="heading-style-h1 brand">
 {{ section.settings.text_headline }}
-</h2>
-</div><div class="product_list-wrapper"><ul role="list" class="product_list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="product_list-item">
+</h1>
+</div></div><div class="product_button-row"><a data-w-id="b639d279-c3a9-3849-6208-e436263098b2" style="opacity:0" href="{{ section.settings.url_button_link }}" class="button w-button"> {{ section.settings.text_button_text }} </a>
+</div></div><div class="product_list-wrapper"><ul role="list" class="product_list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="product_list-item">
                                     
                             {% render 'product_item', product: product %}
 
                             
                         </li>
-{% endfor %}</ul></div></div></div> {% schema %} {"tag":"section","name":"Product-Recommended","class":"section_product-recommended","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Recommended"}],"presets":[{"name":"Product-Recommended","category":"Liquify"}]} {% endschema %}
+{% endfor %}</ul></div></div></div> {% schema %} {"tag":"section","name":"Product-Recommended","class":"section_product-recommended","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Other Merch"},{"id":"url_button_link","type":"url","label":"Button-Link"},{"id":"text_button_text","type":"text","label":"Button-Text","default":"ALL\u00a0MERCH"}],"presets":[{"name":"Product-Recommended","category":"Liquify"}]} {% endschema %}
