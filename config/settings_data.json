@@ -73,6 +73,15 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "9877325503541698247": {
+        "type": "shopify://apps/in-cart-upsell/blocks/ajax_cart_app_block/6a252f23-8726-4893-8b3b-1ae15957efc3",
+        "disabled": false,
+        "settings": {
+          "icu-ajax-selector": "",
+          "icu-ajax-action": "before",
+          "icu-ajax-cart-refresh-code": ""
+        }
       }
     }
   }
