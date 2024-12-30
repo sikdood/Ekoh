@@ -42,9 +42,10 @@
     },
     "hero_tour_dates_JQ9wQW": {
       "type": "hero_tour_dates",
+      "custom_css": [
+        ".tour_tour-poster {display: none;}"
+      ],
       "settings": {
-        "image_main_tour_image": "shopify://shop_images/1080x1350-FLYER.webp",
-        "image_secondary_tour_image": "shopify://shop_images/DragMeFromHellTourMG2-1.webp",
         "text_button_text": "VIP TICKETS AVAILABLE HERE",
         "url_button_link": "shopify://products/meet-and-greet"
       }
