@@ -46,6 +46,7 @@
         ".tour_tour-poster {display: none;}"
       ],
       "settings": {
+        "image_main_tour_image": "shopify://shop_images/LAST_WEDNESDAY_TOUR_PT_4_FEED_EKOH.png",
         "text_button_text": "VIP TICKETS AVAILABLE HERE",
         "url_button_link": "shopify://products/meet-and-greet"
       }
